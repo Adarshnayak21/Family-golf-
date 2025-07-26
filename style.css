@@ -52,24 +52,34 @@ body {
 #nav {
   height: 130px;
   width: 100%;
-  /* background-color: red; */
   display: flex;
   align-items: center;
-  padding: 0 120px;
-  gap: 50px;
+  justify-content: space-between; /* Align logo left, links right */
+  padding: 0 60px; /* Reduced padding for better responsiveness */
   position: fixed;
-  justify-content: flex-start;
+  top: 0;
+  left: 0;
   z-index: 999;
+  background-color: #000; /* Add background to make nav visible */
 }
+
 #nav img {
-  height: 4.5vw;
+  height: clamp(40px, 4.5vw, 70px);
 }
-#nav h4 {
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links h4 {
   text-transform: uppercase;
   font-weight: 500;
   cursor: pointer;
-  font-size: 1.15vw;
+  font-size: clamp(12px, 1.1vw, 18px);
+  color: white;
 }
+
 video {
   height: 100%;
   width: 100%;
